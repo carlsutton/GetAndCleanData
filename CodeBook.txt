@@ -1,0 +1,48 @@
+Getting and Cleaning Data
+Course Project
+Code Book
+
+Study Design
+The instructions for this course project gave the following web address for data to be used
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+The data initially resides in a zip file named UCI HAR Dataset which contains files and folders as follows:
+1.  activity_labels.txt
+2.  features.txt
+3.  features_info.txt
+4.  README.txt
+5   A folder with test data
+6.  A folder with training data
+
+The data was read into R using read.table.  It was necessary to merge files and in the process it was also 
+necessary to add ID columns for the merges.  The instructions for the course project required only columns 
+with mean or standard deviation and the rest of the columns were ignored.
+
+The course project requirements were outlined in 5 "steps" or processes that were to be completed in the
+designated order.
+1.  Merge the training and test sets into one data set.
+2.  Extract only those measurements on the mean and standard deviation for each measurement.
+3.  Use descriptive activity names to name the activities in the data set.
+4.  Appropriately label then data set with descriptive activity names.
+5.  Create a second, independent data set with the average of each variable for each activity and each
+    subject.
+    
+An R script named run_analysis.R contains the code I wrote to accomplish the above 5 steps.  Step 1 consists
+of reading in the data using read.table, verifying the stucture of the data sets were suitable for merging,
+creating ID columns using rownames, and then performing the appropriated merges.  Step 2 was simply reading
+in the features files and using grepl to extract the appropriate means and standard deviation data.  Step 3
+consisted of reading in the activity labels files, assigning column labels of "activity_id" and 
+"activity_label" and merging that into the data set.  Step 4 uses gsub and a for loop to name the columns
+ appropriately(using descriptions in the activities file).  Step 5 was merely using aggregate to compute
+the average(mean) of each variable by each activity and each subject.  
+ 
+The resulting TIDY data set was written as a text file named submit.txt.
+ 
+ 
+
+
+
+
+
+ 
