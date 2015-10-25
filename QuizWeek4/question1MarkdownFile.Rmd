@@ -1,0 +1,17 @@
+---
+title: "Quiz 4 question 1"
+author: "Carl Sutton"
+date: "Saturday, October 24, 2015"
+output: html_document
+---
+This is ridiculous.  Any ideas are appreciated.  My schedule will allow me to get this next Sunday.  My time this week that was allotated to quizes 3 and 4 is blown.  No more time to screw around.
+
+
+```{r}
+#  week 4 quiz, question 1
+urlFile <- "https://d396qusza40orc.clouidfront.net/getdata%2Fdata%2Fss06hid.csv"
+df <- download.file(urlFile,destfile = "data", method = "curl")
+dim(df)
+str(df)
+```
+
