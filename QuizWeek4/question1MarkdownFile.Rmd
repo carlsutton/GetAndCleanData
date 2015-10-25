@@ -4,7 +4,7 @@ author: "Carl Sutton"
 date: "Saturday, October 24, 2015"
 output: html_document
 ---
-This is ridiculous.  Any ideas are appreciated.  My schedule will allow me to get this next Sunday.  My time this week that was allotated to quizes 3 and 4 is blown.  No more time to screw around.
+This is ridiculous.  The file as loaded is NULL. Any ideas are appreciated.  My schedule will allow me to get this next Sunday.  My time this week that was allotated to quizes 3 and 4 is blown.  No more time to screw around.
 
 
 ```{r}
